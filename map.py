@@ -7,7 +7,7 @@ for i in range(0,134):
 
 	mp.plot(p['x'], p['y'], c='#0077ff', linewidth=1.0)
 
-con = psycopg2.connect("dbname=g484-serebryakov user=postgres password=password host=127.0.0.1 port=5432")
+con = psycopg2.connect("dbname=g484-vinogradova user=postgres password=password host=127.0.0.1 port=5432")
 
 cur = con.cursor()
 cur.execute("select lon, lat from noaa_sample.station where type = 'dart' and data = 'y';")
