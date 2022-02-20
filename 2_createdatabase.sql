@@ -3,7 +3,9 @@ drop table  noaa_sample.station cascade;
 drop table  noaa_sample.program cascade;
 
 create table noaa_sample.owner(id int primary key, name varchar(256));
+
 create table noaa_sample.program(id int primary key, name varchar(256));
+
 create table noaa_sample.station(id varchar primary key,
 owner_id int,
 program_id int,
@@ -20,6 +22,7 @@ references noaa_sample.owner(id),
 constraint fc_programm
 foreign key(program_id)
 references noaa_sample.program(id));
+
 create table noaa_sample.data
 (id int primary key,
 station_id int,
