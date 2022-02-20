@@ -6,6 +6,6 @@ $$
 	for i in range(0, n):
 		id = lst[i]["id"]
 		plpy.notice(f"downloading {id} ({i + 1} / {n})")
-		req.urlretrieve(f"https://www.ndbc.noaa.gov/data/realtime2/{id}.dart", f"/home/user/lab27/data/{id}.txt")
+		req.urlretrieve(f"https://www.ndbc.noaa.gov/data/realtime2/{id}.dart", f"/home/user/lab27sql/data/{id}.txt")
 $$;
 call noaa_sample.download_dart_data();
